@@ -67,17 +67,19 @@ All decisions are:
 ---
 
 ## 🏗️ High-Level Architecture
+```text
 User Query
-↓
+   ↓
 Query Complexity Agent (LLM)
-↓
+   ↓
 Cost Policy Agent ──┐
-├──► Execution Controller (Deterministic Rules)
+                    ├──► Execution Controller (Deterministic Rules)
 Latency Policy Agent ┘
-↓
+   ↓
 Optimized RAG Pipeline
-↓
+   ↓
 Answer + Cost/Latency Estimates + Full Trace
+```
 ---
 
 ## 🔧 Key Concepts Used
@@ -92,7 +94,7 @@ Answer + Cost/Latency Estimates + Full Trace
 
 ---
 
-## 📁 Project Structure
+```text
 llm-cost-latency-optimizer/
 │
 ├── app.py                 # Streamlit UI
@@ -104,8 +106,7 @@ llm-cost-latency-optimizer/
 ├── requirements.txt
 ├── .env.example
 └── README.md
----
-
+```
 ## 🤖 Model Tiers
 
 Instead of hardcoding models, the system uses **tiers**:
@@ -220,6 +221,6 @@ This project is intentionally designed to reflect how production GenAI systems a
 📌 Author Notes
 
 Built as a learning-focused project to deeply understand:
-	•	LLM cost/latency trade-offs
-	•	Async GenAI pipelines
-	•	Explainable AI system design
+	`•	LLM cost/latency trade-offs`
+	`•	Async GenAI pipelines`
+	`•	Explainable AI system design`
